@@ -17,7 +17,7 @@ Then you can setup your system to execute `runner.py` at start-up.
 * [Usage](#usage)
 
 ## Installation
-
+[Download](https://github.com/emaori/runner/releases) the latest release.
 
 ## Configuration
 Edit `runner.json` and add the conditions and the programs to run. For instance, this is the configuration if you want to start notepad every day from 9am to 10pm:
