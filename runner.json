@@ -1,0 +1,13 @@
+{
+    "name" : "Name or description of the json file",
+    "schedules" :[
+        {
+            "days" : ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "startTime" : "9.00",
+            "endTime" : "22.00",
+            "tasks" : [
+                "notepad"
+            ]
+        }
+    ]
+}
