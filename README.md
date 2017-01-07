@@ -9,6 +9,8 @@ Other conditions will be added in the future:
 * platform (mac/linux/windows)
 * enable/disable flag
 
+Then you can setup your system to execute `runner.py` at start-up.
+
 ## Contents
 * [Installation](#installation)
 * [Configuration](#configuration)
