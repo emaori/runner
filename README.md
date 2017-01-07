@@ -44,3 +44,5 @@ Execute the python script:
 By default it takes a file named `runner.json` placed in the same folder of the script. If you want to use a different `.json` file:
 
 `python runner.py alternativeRunner.json`
+
+You can also configure your system to execute `runner.py` at the system start-up: that's actually the idea behind `runner.py`! :blush:
