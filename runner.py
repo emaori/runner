@@ -13,12 +13,14 @@ def getTimeTuple(timeStr):
 
 def exeTasks(tasks):
     for t in tasks:
-        print(">> Going to launch: "+ t)
+        print(">>>>>>>>>> Going to launch: "+ t)
         process = subprocess.Popen(t, stdout=subprocess.PIPE)
 
 def exeSchedule(schedule):
     # Check the day
     #currentWeekDay = time.strftime("%A")
+    if "name" in schedule:
+        print(">>>>>> " + schedule["name"])        
     currentWeekDay = calendar.day_name[datetime.today().weekday()]
     if currentWeekDay in schedule["days"]:
         # Chck time
@@ -39,7 +41,10 @@ if len(sys.argv) > 1:
 with open(jsonFilePath) as data_file:
     data = json.load(data_file)
 
-print("Going to execute the json: " + data["name"])
+if "name" in data:
+    print(">>> " + data["name"])
+else:
+    print(">>> Going to execute the json: " + jsonFilePath)
 
 schedules = data["schedules"]
 
