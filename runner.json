@@ -1,5 +1,6 @@
 {
     "name" : "Name or description of the json file",
+    "enable" : true,
     "schedules" :[
         {
             "name" : "Name or description of the schedule",
@@ -10,6 +11,6 @@
             "tasks" : [
                 "notepad"
             ]
-        }
+        }   
     ]
 }

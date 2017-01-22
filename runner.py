@@ -41,6 +41,11 @@ if len(sys.argv) > 1:
 with open(jsonFilePath) as data_file:
     data = json.load(data_file)
 
+if "enable" in data:
+    if not data["enable"]:
+        print("Exit without executing json file: it's disabled")
+        sys.exit(0)
+
 if "name" in data:
     print(">>> " + data["name"])
 else:
