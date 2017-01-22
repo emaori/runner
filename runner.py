@@ -13,7 +13,7 @@ def getTimeTuple(timeStr):
 
 def exeTasks(tasks):
     for t in tasks:
-        print(">>>>>>>>>> Going to launch: "+ t)
+        print(">>>>>>>>>> Going to launch "+ t)
         process = subprocess.Popen(t, stdout=subprocess.PIPE)
 
 def exeSchedule(schedule):
