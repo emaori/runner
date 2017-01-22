@@ -49,6 +49,10 @@ else:
 schedules = data["schedules"]
 
 for s in schedules:
+    # If enable field is not present, execute the schedule (so, default value is true)
+    if "enable" in s:
+        if not s["enable"]:
+            continue
     exeSchedule(s)
 
 print("Runner completed :)")
