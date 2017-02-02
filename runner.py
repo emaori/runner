@@ -24,11 +24,11 @@ def exeSchedule(schedule):
         print(">>>>>> " + schedule["name"])
 
     # Check the platform
-    if "platform" in schedule:
+    if "platforms" in schedule:
         currentPlatform = platform.system()
         # If currentPlatform is an empty string it means that it cannot be determinated -> continue
         if not currentPlatform == "":
-            if not currentPlatform in schedule["platform"]:
+            if not currentPlatform in schedule["platforms"]:
                 # This schedule cannot run in the current platform
                 print("Current platform not supported by this schedule")
                 return
