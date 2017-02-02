@@ -6,6 +6,7 @@ import time
 import calendar
 import subprocess
 import sys
+import platform
 from datetime import datetime, time
 
 def getTimeTuple(timeStr):
@@ -20,7 +21,18 @@ def exeSchedule(schedule):
     # Check the day
     #currentWeekDay = time.strftime("%A")
     if "name" in schedule:
-        print(">>>>>> " + schedule["name"])        
+        print(">>>>>> " + schedule["name"])
+
+    # Check the platform
+    if "platform" in schedule:
+        currentPlatform = platform.system()
+        # If currentPlatform is an empty string it means that it cannot be determinated -> continue
+        if not currentPlatform == "":
+            if not currentPlatform in schedule["platform"]:
+                # This schedule cannot run in the current platform
+                print("Current platform not supported by this schedule")
+                return
+
     currentWeekDay = calendar.day_name[datetime.today().weekday()]
     if currentWeekDay in schedule["days"]:
         # Chck time
